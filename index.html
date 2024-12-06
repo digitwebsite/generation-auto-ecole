@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generation Auto École </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <style>
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #16a34a;
+        }
+        .formation-card {
+            transition: all 0.3s ease;
+        }
+        .formation-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        .menu-mobile {
+            display: none;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 50;
+        }
+        .menu-mobile.active {
+            display: block;
+        }
+        .car-animation {
+            animation: drive 20s linear infinite;
+        }
+        @keyframes drive {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100vw); }
+        }
+        .emoji-bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .open-badge {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-green-600">Génération Auto École </span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#accueil" class="nav-link text-gray-700">Accueil</a>
+                    <a href="#formations" class="nav-link text-gray-700">Formations</a>
+                    <a href="#services" class="nav-link text-gray-700">Services</a>
+                </div>
+                
+                <div class="flex items-center">
+                    <span class="open-badge bg-green-500 text-white px-3 py-1 rounded-full text-sm mr-4">
+                        Ouvert 24h/24
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-green-600 to-green-400 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Génération Auto École </h1>
+            <p class="text-xl mb-8">Formation complète pour tous les types de permis</p>
+            <div class="max-w-lg mx-auto bg-white text-green-600 p-4 rounded-lg">
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="emoji-bounce text-2xl">🚗</span>
+                    <h3 class="font-semibold">🔔 Promotion : 90.000 FCFA, toutes catégories</h3>
+                </div>
+           
+                <p class="text-gray-600 text-sm mt-2">
+                    Offre valable jusqu'au 05 Janvier 2024
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formations -->
+    <div id="formations" class="py-16 max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Nos Formations</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Les cartes de formation restent identiques mais avec du vert -->
+            <div class="formation-card bg-white p-6 rounded-lg shadow">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-2xl">🚗</span>
+                    <h3 class="text-xl font-semibold">Permis de conduire</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Catégorie A (Moto)
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Catégorie B (Voiture)
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Catégorie BCDE (Poids lourds)
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Catégorie ABCDE (Toutes catégories)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="formation-card bg-white p-6 rounded-lg shadow">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-2xl">⏱️</span>
+                    <h3 class="text-xl font-semibold">Types de formation</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Version accélérée (2 mois)
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Version normale (selon disponibilité)
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Cours de recyclage
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Formation post-permis
+                    </li>
+                </ul>
+            </div>
+
+            <div class="formation-card bg-white p-6 rounded-lg shadow">
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-2xl">🌟</span>
+                    <h3 class="text-xl font-semibold">Services spéciaux</h3>
+                </div>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Permis International
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Véhicule Manuel
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Véhicule Automatique
+                    </li>
+                    <li class="flex items-center">
+                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                        Assurance auto et moto
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="services" class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="settings" class="text-green-600"></i>
+                        <h3 class="text-xl font-semibold">Services automobiles</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="book" class="text-green-600"></i>
+                        <h3 class="text-xl font-semibold">Formation</h3>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i data-feather="plus" class="text-green-600"></i>
+                        <h3 class="text-xl font-semibold">Autre activité</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer avec les informations de contact -->
+    <footer class="bg-green-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="map-pin" class="text-white"></i>
+                        <a 
+href="https://www.google.com/maps?q=73P3+39J Abidjan">73P3+39J Abidjan</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="phone" class="text-white"></i>
+                        <a href="tel:0789018772" class="hover:text-green-300">0789018772</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="mail" class="text-white"></i>
+                        <a href="mailto:autoecolegeneration01@gmail.com" class="hover:text-green-300">autoecolegeneration01@gmail.com</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <i data-feather="clock" class="text-white"></i>
+                        <p>Ouvert 24h/24</p>
+                    </div>
+                </div>
+                    </div>
+              
+                    <form id="contactForm" class="space-y-4">
+                        <input 
+                            type="text" 
+                            placeholder="Nom complet" 
+                            class="w-full p-2 border rounded-lg text-gray-800"
+                            required
+                        >
+                        <input 
+                            type="email" 
+                            placeholder="Email" 
+                            class="w-full p-2 border rounded-lg text-gray-800"
+                            required
+                        >
+                        <input 
+                            type="tel" 
+                            placeholder="Téléphone" 
+                            class="w-full p-2 border rounded-lg text-gray-800"
+                            required
+                        >
+                        <textarea 
+                            placeholder="Message" 
+                            class="w-full p-2 border rounded-lg h-32 text-gray-800"
+                            required
+                        ></textarea>
+                        <a 
+                            href="https://wa.me/2250789018772"
+                            class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 inline-block text-center"
+                            target="_blank"
+                        >
+                            Envoyer
+                        </a>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-green-700">
+                <p>&copy; 2024 Génération Auto École - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+
+        // Form submission
+        document.querySelector('#contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.open('https://wa.me/2250789018772', '_blank');
+            this.reset();
+        });
+    </script>
+</body>
+  </html>
