@@ -1,13 +1,18 @@
-<!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generation Auto École </title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
-    <style>
-        .nav-link {
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Génération Auto École
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js">
+  </script>
+  <style>
+   .nav-link {
             transition: color 0.3s;
         }
         .nav-link:hover {
@@ -55,229 +60,314 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.6; }
         }
-    </style>
-</head>
-<body class="min-h-screen bg-gray-50">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-lg">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <span class="text-xl font-bold text-green-600">Génération Auto École </span>
-                </div>
-                
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#accueil" class="nav-link text-gray-700">Accueil</a>
-                    <a href="#formations" class="nav-link text-gray-700">Formations</a>
-                    <a href="#services" class="nav-link text-gray-700">Services</a>
-                </div>
-                
-                <div class="flex items-center">
-                    <span class="open-badge bg-green-500 text-white px-3 py-1 rounded-full text-sm mr-4">
-                        Ouvert 24h/24
-                    </span>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-green-600 to-green-400 text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Génération Auto École </h1>
-            <p class="text-xl mb-8">Formation complète pour tous les types de permis</p>
-            <div class="max-w-lg mx-auto bg-white text-green-600 p-4 rounded-lg">
-                <div class="flex items-center justify-center space-x-2">
-                    <span class="emoji-bounce text-2xl">🚗</span>
-                    <h3 class="font-semibold">🔔 Promotion : 90.000 FCFA, toutes catégories</h3>
-                </div>
-           
-                <p class="text-gray-600 text-sm mt-2">
-                    Offre valable jusqu'au 05 Janvier 2024
-                </p>
-            </div>
-            </div>
-        </div>
+        .accordion-content {
+            display: none;
+        }
+        .accordion-content.active {
+            display: block;
+        }
+  </style>
+ </head>
+ <body class="min-h-screen bg-gray-50">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+   <div class="max-w-7xl mx-auto px-4">
+    <div class="flex justify-between h-16">
+     <div class="flex items-center">
+      <span class="text-xl font-bold text-green-600">
+       Génération Auto École
+      </span>
+     </div>
+     <div class="hidden md:flex items-center space-x-8">
+      <a class="nav-link text-gray-700" href="#accueil">
+       Accueil
+      </a>
+      <a class="nav-link text-gray-700" href="#formations">
+       Formations
+      </a>
+      <a class="nav-link text-gray-700" href="#services">
+       Services
+      </a>
+     </div>
+     <div class="flex items-center">
+      <span class="open-badge bg-green-500 text-white px-3 py-1 rounded-full text-sm mr-4">
+       Ouvert 24h/24
+      </span>
+     </div>
     </div>
-
-    <!-- Formations -->
-    <div id="formations" class="py-16 max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">Nos Formations</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Les cartes de formation restent identiques mais avec du vert -->
-            <div class="formation-card bg-white p-6 rounded-lg shadow">
-                <div class="flex items-center space-x-2 mb-4">
-                    <span class="text-2xl">🚗</span>
-                    <h3 class="text-xl font-semibold">Permis de conduire</h3>
-                </div>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Catégorie A (Moto)
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Catégorie B (Voiture)
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Catégorie BCDE (Poids lourds)
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Catégorie ABCDE (Toutes catégories)
-                    </li>
-                </ul>
-            </div>
-
-            <div class="formation-card bg-white p-6 rounded-lg shadow">
-                <div class="flex items-center space-x-2 mb-4">
-                    <span class="text-2xl">⏱️</span>
-                    <h3 class="text-xl font-semibold">Types de formation</h3>
-                </div>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Version accélérée (2 mois)
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Version normale (selon disponibilité)
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Cours de recyclage
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Formation post-permis
-                    </li>
-                </ul>
-            </div>
-
-            <div class="formation-card bg-white p-6 rounded-lg shadow">
-                <div class="flex items-center space-x-2 mb-4">
-                    <span class="text-2xl">🌟</span>
-                    <h3 class="text-xl font-semibold">Services spéciaux</h3>
-                </div>
-                <ul class="space-y-2">
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Permis International
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Véhicule Manuel
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Véhicule Automatique
-                    </li>
-                    <li class="flex items-center">
-                        <i data-feather="check" class="w-4 h-4 text-green-500 mr-2"></i>
-                        Assurance auto et moto
-                    </li>
-                </ul>
-            </div>
-        </div>
+   </div>
+  </nav>
+  <!-- Hero Section -->
+  <div class="bg-gradient-to-r from-green-600 to-green-400 text-white py-20">
+   <div class="max-w-7xl mx-auto px-4 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+     Génération Auto École
+    </h1>
+    <p class="text-xl mb-8">
+     Formation complète pour tous les types de permis
+    </p>
+    <div class="max-w-lg mx-auto bg-white text-green-600 p-4 rounded-lg">
+     <div class="flex items-center justify-center space-x-2">
+      <span class="emoji-bounce text-2xl">
+       🚗
+      </span>
+      <h3 class="font-semibold">
+       🔔 Promotion : 90.000 FCFA, toutes catégories
+      </h3>
+     </div>
+     <p class="text-gray-600 text-sm mt-2">
+      Offre valable jusqu'au 05 Janvier 2024
+     </p>
     </div>
-
-    <!-- Services -->
-    <div id="services" class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i data-feather="settings" class="text-green-600"></i>
-                        <h3 class="text-xl font-semibold">Services automobiles</h3>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i data-feather="book" class="text-green-600"></i>
-                        <h3 class="text-xl font-semibold">Formation</h3>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg shadow">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i data-feather="plus" class="text-green-600"></i>
-                        <h3 class="text-xl font-semibold">Autre activité</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+   </div>
+  </div>
+  <!-- Formations -->
+  <div class="py-16 max-w-7xl mx-auto px-4" id="formations">
+   <h2 class="text-3xl font-bold text-center mb-12">
+    Nos Formations
+   </h2>
+   <div class="grid md:grid-cols-2 gap-8">
+    <!-- Formation initiale au code de la route -->
+    <div class="formation-card bg-white p-6 rounded-lg shadow">
+     <div class="flex items-center space-x-2 mb-4">
+      <img alt="Image représentant une carte de permis de conduire" height="50" src="https://storage.googleapis.com/a1aa/image/YqUVD9ifgVWgeEQVXU8xeR84CzDIIQ7JfZHT3SseK04k5pCfE.jpg" width="50"/>
+      <h3 class="text-xl font-semibold">
+       Formation initiale au code de la route
+      </h3>
+     </div>
+     <div class="accordion">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Les catégories de permis
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        - Moto (A)
+       </p>
+       <p>
+        - Voiture personnelle (B)
+       </p>
+       <p>
+        - Véhicule de transport commun et marchandises (BCDE)
+       </p>
+       <p>
+        - Tous Engins (ABCDE)
+       </p>
+      </div>
+     </div>
+     <div class="accordion mt-4">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Timing
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        - Version accélérée (02 mois)
+       </p>
+       <p>
+        - Version normale (selon disponibilité)
+       </p>
+      </div>
+     </div>
     </div>
-
-    <!-- Footer avec les informations de contact -->
-    <footer class="bg-green-800 text-white py-8 mt-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-4">
-                        <i data-feather="map-pin" class="text-white"></i>
-                        <a 
-href="https://www.google.com/maps?q=73P3+39J Abidjan">73P3+39J Abidjan</a>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <i data-feather="phone" class="text-white"></i>
-                        <a href="tel:0789018772" class="hover:text-green-300">0789018772</a>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <i data-feather="mail" class="text-white"></i>
-                        <a href="mailto:autoecolegeneration01@gmail.com" class="hover:text-green-300">autoecolegeneration01@gmail.com</a>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <i data-feather="clock" class="text-white"></i>
-                        <p>Ouvert 24h/24</p>
-                    </div>
-                </div>
-                    </div>
-              
-                    <form id="contactForm" class="space-y-4">
-                        <input 
-                            type="text" 
-                            placeholder="Nom complet" 
-                            class="w-full p-2 border rounded-lg text-gray-800"
-                            required
-                        >
-                        <input 
-                            type="email" 
-                            placeholder="Email" 
-                            class="w-full p-2 border rounded-lg text-gray-800"
-                            required
-                        >
-                        <input 
-                            type="tel" 
-                            placeholder="Téléphone" 
-                            class="w-full p-2 border rounded-lg text-gray-800"
-                            required
-                        >
-                        <textarea 
-                            placeholder="Message" 
-                            class="w-full p-2 border rounded-lg h-32 text-gray-800"
-                            required
-                        ></textarea>
-                        <a 
-                            href="https://wa.me/2250789018772"
-                            class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 inline-block text-center"
-                            target="_blank"
-                        >
-                            Envoyer
-                        </a>
-                    </form>
-                </div>
-            </div>
-            <div class="text-center pt-8 border-t border-green-700">
-                <p>&copy; 2024 Génération Auto École - Tous droits réservés</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Initialize Feather Icons
+    <!-- Cours de Recyclage -->
+    <div class="formation-card bg-white p-6 rounded-lg shadow">
+     <div class="flex items-center space-x-2 mb-4">
+      <img alt="Image représentant une personne au volant d'une voiture" height="50" src="https://storage.googleapis.com/a1aa/image/7WqCXMvZMe1SGCbKNAZeem5kytl4k49HX6x7nTbcrgATnqwnA.jpg" width="50"/>
+      <h3 class="text-xl font-semibold">
+       Cours de Recyclage
+      </h3>
+     </div>
+     <div class="accordion">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Véhicule Manuel
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        10 séances 1h/séance
+       </p>
+      </div>
+     </div>
+     <div class="accordion mt-4">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Véhicule Automatique
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        10 séances 1h/séance
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Formation Post-permis -->
+    <div class="formation-card bg-white p-6 rounded-lg shadow">
+     <div class="flex items-center space-x-2 mb-4">
+      <img alt="Image représentant des apprenants à un cours d'automobile" height="50" src="https://storage.googleapis.com/a1aa/image/elVTgbZJpo1XXiwkvNXybfnQRhSMRt73YmdpLDUwKddOPV4TA.jpg" width="50"/>
+      <h3 class="text-xl font-semibold">
+       Formation Post-permis
+      </h3>
+     </div>
+     <div class="accordion">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Formation dédiée aux entreprises
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        Perfectionnement en formation de conduite pour leurs personnels
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Formation initiale au code de la route et insertion socio-professionnelle -->
+    <div class="formation-card bg-white p-6 rounded-lg shadow">
+     <div class="flex items-center space-x-2 mb-4">
+      <img alt="Image représentant le droit routier" height="50" src="https://storage.googleapis.com/a1aa/image/XoD4DgGw4Hb9OJIVW5goeaMMXwl86zxQ0NBKCYV2vWgknK8JA.jpg" width="50"/>
+      <h3 class="text-xl font-semibold">
+       Formation initiale au code de la route et insertion socio-professionnelle
+      </h3>
+     </div>
+     <div class="accordion">
+      <div class="accordion-header cursor-pointer flex items-center justify-between">
+       <span>
+        Formation en conduite
+       </span>
+       <i data-feather="chevron-down">
+       </i>
+      </div>
+      <div class="accordion-content space-y-2 mt-2">
+       <p>
+        Délivrance d'un certificat pour toutes intégrations professionnelles dans une entreprise tierce ou dans l'entreprise formatrice
+       </p>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Services -->
+  <div class="bg-gray-100 py-16" id="services">
+   <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Nos Services
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+     <div class="bg-white p-6 rounded-lg shadow">
+      <div class="flex items-center space-x-2 mb-4">
+       <img alt="Image représentant un permis international" height="50" src="https://storage.googleapis.com/a1aa/image/s0nscZN9n5bZDdKMU6mtZOgBiCVqCKPROnkVo9ApbAxekK8JA.jpg" width="50"/>
+       <h3 class="text-xl font-semibold">
+        Permis International
+       </h3>
+      </div>
+      <p class="text-gray-600">
+       Obtenez votre permis de conduire international pour conduire en toute légalité à l'étranger.
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow">
+      <div class="flex items-center space-x-2 mb-4">
+       <img alt="Image représentant des assurances auto et moto" height="50" src="https://storage.googleapis.com/a1aa/image/enFPk79J2KSDEKCvwAHhOkv4ROCSvCUmehqQX05xsjAQPV4TA.jpg" width="50"/>
+       <h3 class="text-xl font-semibold">
+        Assurances Auto et Moto
+       </h3>
+      </div>
+      <p class="text-gray-600">
+       Protégez votre véhicule avec nos offres d'assurance auto et moto adaptées à vos besoins.
+      </p>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Contact Form -->
+  <div class="bg-white py-16">
+   <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">
+     Contactez-nous
+    </h2>
+    <form class="space-y-4 max-w-lg mx-auto" id="contactForm">
+     <input class="w-full p-2 border rounded-lg text-gray-800" placeholder="Nom complet" required="" type="text"/>
+     <input class="w-full p-2 border rounded-lg text-gray-800" placeholder="Email" required="" type="email"/>
+     <input class="w-full p-2 border rounded-lg text-gray-800" placeholder="Téléphone" required="" type="tel"/>
+     <textarea class="w-full p-2 border rounded-lg h-32 text-gray-800" placeholder="Message" required=""></textarea>
+     <a class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 inline-block text-center" href="https://wa.me/2250789018772" target="_blank">
+      Envoyer
+     </a>
+    </form>
+   </div>
+  </div>
+  <!-- Footer avec les informations de contact -->
+  <footer class="bg-green-800 text-white py-8 mt-16">
+   <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+     <div class="space-y-4">
+      <div class="flex items-center space-x-4">
+       <i class="text-white" data-feather="map-pin">
+       </i>
+       <a href="https://www.google.com/maps?q=73P3+39J Abidjan">
+        73P3+39J Abidjan
+       </a>
+      </div>
+      <div class="flex items-center space-x-4">
+       <i class="text-white" data-feather="phone">
+       </i>
+       <a class="hover:text-green-300" href="tel:0789018772">
+        0789018772
+       </a>
+      </div>
+      <div class="flex items-center space-x-4">
+       <i class="text-white" data-feather="mail">
+       </i>
+       <a class="hover:text-green-300" href="mailto:autoecolegeneration01@gmail.com">
+        autoecolegeneration01@gmail.com
+       </a>
+      </div>
+      <div class="flex items-center space-x-4">
+       <i class="text-white" data-feather="clock">
+       </i>
+       <p>
+        Ouvert 24h/24
+       </p>
+      </div>
+     </div>
+     <div class="flex space-x-4 justify-center md:justify-start">
+      <a href="https://www.facebook.com/profile.php?id=100083001468806" target="_blank">
+       <i class="fab fa-facebook-f text-white text-2xl">
+       </i>
+      </a>
+      <a href="https://www.instagram.com/generationautoecole4?igsh=MTZoZHRsdXkyaXY3Ng==" target="_blank">
+       <i class="fab fa-instagram text-white text-2xl">
+       </i>
+      </a>
+      <a href="https://wa.me/2250789018772" target="_blank">
+       <i class="fab fa-whatsapp text-white text-2xl">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div class="text-center pt-8 border-t border-green-700">
+     <p>
+      © 2024 Génération Auto École - Tous droits réservés
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script>
+   // Initialize Feather Icons
         feather.replace();
 
         // Form submission
@@ -286,6 +376,15 @@ href="https://www.google.com/maps?q=73P3+39J Abidjan">73P3+39J Abidjan</a>
             window.open('https://wa.me/2250789018772', '_blank');
             this.reset();
         });
-    </script>
-</body>
-  </html>
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+                header.querySelector('i').classList.toggle('rotate-180');
+            });
+        });
+  </script>
+ </body>
+</html>
